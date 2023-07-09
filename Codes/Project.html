@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atta - Developer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .purple{
+            color: rgb(158, 84, 228);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(5, 5, 41);
+            color: white;
+        }
+
+        nav {
+            background-color: rgb(22, 22, 68);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li{
+            margin: 0 30px;
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover{
+            font-size: 1.02rem;
+            color: rgb(158, 84, 228);
+        }
+
+        div.left {
+            font-size: 2rem;
+        }
+
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        .firstSection > div{
+            width: 40%;
+        }
+
+        .leftSection{
+            font-size: 3rem;
+            margin: 0 50px;
+        }
+
+        .rightSection img{
+            width: 80%;
+        }
+
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi my name is <span class="purple">Atta</span>  
+                <div>and I am a passionate</div>
+                <span>Web Developer.</span> 
+            </div>
+
+            <div class="rightSection">
+                <img src="../Images/HomeBG.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
