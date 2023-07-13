@@ -17,6 +17,9 @@ This is my personal portfolio website, showcasing my skills, projects, and exper
 - Web Hosting: Deployment of the website using platforms like Netlify, GitHub Pages, or other hosting services.
 
 # License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the DevAttaulNoor.
+
+# Contact
+If you have any questions or suggestions, feel free to contact the project maintainer at attaulnoor2001@gmail.com
 
 Feel free to use this repository as a starting point for your own portfolio website. Customize it to your liking, add your projects, and showcase your skills as a front-end web developer. Happy coding!
