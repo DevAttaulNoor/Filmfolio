@@ -11,7 +11,7 @@ This is my personal portfolio website, showcasing my skills, projects, and exper
 
 # Technologies Used
 - HTML5 and CSS3: Semantic markup and styling of the website.
-- JavaScript: Interactivity and dynamic features.
+- Javascript: Interactivity and dynamic features.
 - Responsive Design: Ensuring the website looks great on different devices and screen sizes.
 - Git and GitHub: Version control and collaboration.
 - Web Hosting: Deployment of the website using platforms like Netlify, GitHub Pages, or other hosting services.
