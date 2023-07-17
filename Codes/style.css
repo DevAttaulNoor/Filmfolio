@@ -1,4 +1,10 @@
 /** .............Global Styles............. */
+:root {
+    --main-color: gold;
+    --second-color: black;
+    --white-color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +12,21 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(5, 5, 41);
+    background-color: #000;
     color: white;
 }
 
-/** .............Custom Styles............. */
-.purple {
-    color: rgb(158, 84, 228);
+span{
+    color: var(--main-color);   
 }
+
+/** .............Custom Styles............. */
+
 
 /** ...............Home Page............... */
 /* Navbar */
 nav {
-    background-color: rgb(22, 22, 68);
+    background-color: var(--main-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,18 +38,20 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 30px;
+    margin: 0 20px;
     list-style: none;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white-color);
 }
 
-nav ul li a:hover {
-    font-size: 1.02rem;
-    color: rgb(158, 84, 228);
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--second-color);
 }
 
 div.left {
