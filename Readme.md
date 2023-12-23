@@ -1,5 +1,5 @@
 # Introduction
-This is my personal portfolio website, showcasing my skills, projects, and experience as a front-end web developer. It provides an overview of my work and serves as a platform to highlight my expertise to potential clients or employers.
+This is my personal portfolio website, showcasing my skills, projects, and experience as a front-end web developer. It provides an overview of my work and serves as a platform to highlight my expertise to potential employers.
 
 # Features
 - **Home**: A brief introduction about me, my skills, and my passion for web development.
