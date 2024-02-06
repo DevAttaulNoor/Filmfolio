@@ -1,19 +1,15 @@
 # Introduction
-This is my personal portfolio website, showcasing my skills, projects, and experience as a front-end web developer. It provides an overview of my work and serves as a platform to highlight my expertise to potential employers.
+Welcome to our Movie Landing Page repository! This project showcases a sleek and interactive landing page for movie enthusiasts. With a focus on user experience, we've crafted a dynamic layout using HTML, CSS, and JavaScript to display a banner featuring some of the movies along with some information.
 
 # Features
-- **Home**: A brief introduction about me, my skills, and my passion for web development.
-- **About**: Detailed information about my background, education, work experience, and achievements.
-- **Projects**: Showcase of my past projects, including descriptions, technologies used, and links to live demos or GitHub repositories.
-- **Skills**: An overview of my technical skills, programming languages, frameworks, and tools.
-- **Resume**: A downloadable version of my resume or a link to my LinkedIn profile.
-- **Contact**: A contact form or contact information for visitors to get in touch with me.
+- **Responsive Design**: The landing page is designed to be responsive, ensuring a seamless viewing experience across various devices and screen sizes.
+- **Movie Banners**: The page displays 5-6 movie banners, each featuring a poster image and basic details like the movie title, release year, and genre.
+- **Interactive Elements**: Users can interact with the movie banners by hovering over them to reveal additional details or clicking to navigate to a separate page for more information.
 
 # Technologies Used
-- HTML5 and CSS3: Semantic markup and styling of the website.
-- Javascript: Interactivity and dynamic features.
-- Git and GitHub: Version control and collaboration.
-- Web Hosting: Deployment of the website using platforms like Netlify, GitHub Pages, or other hosting services.
+- HTML: Markup language for structuring the content of the web page.
+- CSS: Styling language used to enhance the visual presentation and layout.
+- JavaScript: Programming language utilized for implementing interactive features and dynamic behavior.
 
 # License
 This project is licensed under the DevAttaulNoor.
