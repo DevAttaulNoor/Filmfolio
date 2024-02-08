@@ -7,30 +7,79 @@
     <title>iMovies</title>
 
     <!-- Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navbar Section -->
-    <nav>
-        <h2>iMovies</h2>
-        <ul class="navbar">
-            <li>Home</li>
-            <li>Adult</li>
-            <li>Kids</li>
-            <li>Trend</li>
-            <li>Saved</li>
-        </ul>
-        <div>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="headerLeft">
+            <h2>iMovies</h2>
+        </div>
+        <div class="headerMiddle">
+            <p>Home</p>
+            <p>Adult</p>
+            <p>Kids</p>
+            <p>Trend</p>
+            <p>Saved</p>
+        </div>
+        <div class="headerRight">
             <input type="text">
         </div>
-    </nav>
+    </header>
 
-    <script src="script.jsS"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Body Section -->
+    <section class="body">
+        <div class="bodyLeft">
+            <div class="bodyLeft_Top">
+                <img src="Images/the-tank-title.png" alt="">
+            </div>
+            <div class="bodyLeft_Middle">
+                <p>2023</p>
+                <p>12+</p>
+                <p>2hr 14min</p>
+                <p>Romance</p>
+            </div>
+            <div class="bodyLeft_Bottom">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta velit dignissimos, atque
+                    necessitatibus iste. Necessitatibus quod nostrum ipsa id, placeat fuga optio, quos architecto
+                    reprehenderit nulla minus eos omnis!</p>
+                <button>Watch</button>
+                <button>My List</button>
+            </div>
+        </div>
+
+        <div class="bodyRight">
+            <div class="movie-slider">
+                <div class="movie-banners">
+                    <img src="Images/movies/the-little-mermaid.jpeg" alt="The Little Mermaid">
+                    <img src="Images/movies/the-black-demon.jpg" alt="The Black Demon">
+                    <img src="Images/movies/the-covenant.jpg" alt="The Covenant">
+                    <img src="Images/movies/the-tank.jpeg" alt="The Tank">
+                    <img src="Images/movies/65.jpg" alt="Movie 65">
+                </div>
+                <button class="prev" onclick="moveSlide(1)">❮</button>
+                <button class="next" onclick="moveSlide(1)">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footerLeft">
+            <p>Watch Trailer</p>
+        </div>
+
+        <div class="footerRight">
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
 
 </html>
