@@ -100,25 +100,19 @@ header .headerRight input{
 .movie-slider {
     width: 180px;
     height: 270px;
-    overflow: hidden;
     position: relative;
 }
 
 .movie-banners {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in;
 }
 
 .movie-banners img {
     width: 100%;
     display: block;
     opacity: 0.5; /* Set initial opacity for banners in the background */
-    transition: opacity 0.5s ease;
-}
-
-.movie-banners img.active {
-    width: 100%;
-    opacity: 1;
+    transition: opacity 0.5s ease-in;
 }
 
 .prev, .next {
@@ -138,6 +132,7 @@ header .headerRight input{
 .next {
     right: 0;
 }
+
 
 /** Footer Section */
 footer{
