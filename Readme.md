@@ -1,5 +1,5 @@
 # Introduction
-Welcome to our Movie Landing Page repository! This project showcases a sleek and interactive landing page for movie enthusiasts. With a focus on user experience, we've crafted a dynamic layout using HTML, CSS, and JavaScript to display a banner featuring some of the movies along with some information.
+This project showcases a sleek and interactive landing page for movie enthusiasts. With a focus on user experience, we've crafted a dynamic layout using HTML, CSS, and JavaScript to display a banner featuring some of the movies along with some information.
 
 # Features
 - **Responsive Design**: The landing page is designed to be responsive, ensuring a seamless viewing experience across various devices and screen sizes.
