@@ -1,10 +1,303 @@
+/* * Global
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff3700;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 100px;
+    z-index: 10;
+}
+
+.logo{
+    font-size: 40px;
+    color: #ffff;
+    letter-spacing: 1px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.nav li a{
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav li:hover a{
+    color: var(--primary);
+}
+
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+    background: transparent;
+    border: 1 solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 45px !important;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder{
+    color: #ffff;
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    padding-right: 10px;
+    color: #ffff;
+    border-right: 1px solid #ffff;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('./Images/the-little-mermaid-title.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner:hover{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    max-width: 550px;
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.content.active{
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.movie-title{
+    max-width: 250px;
+}
+
+.banner .content h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h4 span:first-child{
+    padding-left: 0;
+}
+
+.banner .content h4 span:last-child{
+    padding-right: 0;
+}
+
+.banner .content h4 span i{
+    background: var(--primary);
+    color: #ffff;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.banner .content p{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #ffff;
+    margin: 10px 0 20px;
+}
+
+.banner .content .button{
+    position: relative;
+}
+
+.banner .content .button a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: var(--primary);
+    color: #ffff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.banner .content .button a:nth-child(2){
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.banner .content .button a:hover:nth-child(2){
+    background: var(--primary);
+}
+
+.banner .carousel-box{
+    position: relative;
+    min-width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+.carousel{
+    position: relative;
+    height: 550px;
+    perspective: 1500px;
+}
+
+.carousel .carousel-item{
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img{
+    max-width: 235px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-100px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.play{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer !important;
+    transition: 0.3s;
+}
+
+.play i{
+    margin-right: 10px;
+    font-size: 40px;
+    cursor: pointer !important;
+}
+
+.play:hover{
+    color: var(--primary);
+}
+
+.sci{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.sci a{
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sci a:hover{
+    color: var(--primary);
+} */
+
+
 /** Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --primaryColor: #002147;
     --secondaryColor: #b9cf25;
     --greyColor: #999999;
     --whiteColor: #fff;
+    --primary: #ff3700;
 }
 
 body {
@@ -22,8 +315,7 @@ body {
 }
 
 /** Header Section */
-header{
-    height: 60px;
+.header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,33 +323,38 @@ header{
     color: var(--whiteColor);
 }
 
-header .headerLeft{
+.header .headerLeft{
     display: flex;
     align-items: center;
 }
 
-header .headerLeft h2{
+.header .headerLeft h2{
     font-size: 36px;
     font-weight: 600;
 }
 
-header .headerMiddle{
+.header .headerMiddle{
     display: flex;
 }
 
-header .headerMiddle p {
+.header .headerMiddle p {
     padding: 0 15px;
     margin: 0;
     font-size: 16px;
     font-weight: 500;
 }
 
-header .headerRight{
+.header .headerMiddle p:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.header .headerRight{
     display: flex;
     align-items: center;
 }
 
-header .headerRight input{
+.header .headerRight input{
     width: 120px;
     height: 20px;
 }
@@ -65,79 +362,157 @@ header .headerRight input{
 /** Body Section */
 .body{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
     color: var(--whiteColor);
 }
 
 .body .bodyLeft{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .body .bodyLeft_Top img{
     width: auto;
-    height: 80px;
+    height: 100px;
 }
 
-.body .bodyLeft_Middle{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 0;
+.body .bodyLeft_Middle h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.body .bodyLeft_Middle h4 span{
+    padding: 0 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.body .bodyLeft_Middle h4 span:first-child{
+    padding-left: 0;
+}
+
+.body .bodyLeft_Middle h4 span:last-child{
+    padding-right: 0;
+    border-right: none;
+}
+
+.body .bodyLeft_Middle h4 span i{
+    background: var(--primary);
+    color: #ffff;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
 }
 
 .body .bodyLeft_Bottom p{
-    margin: 0 0 10px 0;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #ffff;
+    margin: 10px 0 20px;
 }
 
-.body .bodyRight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.movie-slider {
-    width: 180px;
-    height: 270px;
+.body .bodyLeft_Bottom .button{
     position: relative;
 }
 
-.movie-banners {
-    display: flex;
-    transition: transform 0.5s ease-in;
-}
-
-.movie-banners img {
-    width: 100%;
-    display: block;
-    opacity: 0.5; /* Set initial opacity for banners in the background */
-    transition: opacity 0.5s ease-in;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+.body .bodyLeft_Bottom .button a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: var(--primary);
+    color: #ffff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.prev {
-    left: 0;
+.body .bodyLeft_Bottom .button a:nth-child(2){
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.next {
-    right: 0;
+.body .bodyLeft_Bottom .button a:hover:nth-child(2){
+    background: var(--primary);
 }
 
+.bodyRight .carousel-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
+
+.carousel{
+    position: relative;
+    height: 365px;
+    perspective: 600px;
+}
+
+.carousel .carousel-item{
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img{
+    max-width: 230px;
+    border-radius: 10px;
+    transform: translateX(8px) translateY(-70px);
+    object-fit: cover;
+    object-position: center;
+}
 
 /** Footer Section */
-footer{
+.footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.footerLeft .play{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: var(--whiteColor);
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.play:hover{
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.play i{
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.footerRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerRight a{
+    font-size: 24px;
+    color: var(--whiteColor);
+    transition: 0.2s;
+}
+
+.footerRight a:hover{
+    color: var(--primary);
+    cursor: pointer;
 }

@@ -7,8 +7,7 @@
     <title>iMovies</title>
 
     <!-- Links -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,31 +36,40 @@
                 <img src="Images/the-tank-title.png" alt="">
             </div>
             <div class="bodyLeft_Middle">
-                <p>2023</p>
-                <p>12+</p>
-                <p>2hr 14min</p>
-                <p>Romance</p>
+                <h4><span>2023</span><span><i>12+</i></span><span>2hr 14min</span><span>Romance</span></h4>
             </div>
             <div class="bodyLeft_Bottom">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta velit dignissimos, atque
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta velit dignissimos, atque
                     necessitatibus iste. Necessitatibus quod nostrum ipsa id, placeat fuga optio, quos architecto
-                    reprehenderit nulla minus eos omnis!</p>
-                <button>Watch</button>
-                <button>My List</button>
+                    reprehenderit nulla minus eos omnis!
+                </p>
+                <div class="button">
+                    <a href="#"><i class="fa-solid fa-play"></i></a>
+                    <a href="#"><i class="fa-solid fa-plus"></i></a>
+                </div>
             </div>
         </div>
 
         <div class="bodyRight">
-            <div class="movie-slider">
-                <div class="movie-banners">
-                    <img src="Images/movies/the-little-mermaid.jpeg" alt="The Little Mermaid">
-                    <img src="Images/movies/the-black-demon.jpg" alt="The Black Demon">
-                    <img src="Images/movies/the-covenant.jpg" alt="The Covenant">
-                    <img src="Images/movies/the-tank.jpeg" alt="The Tank">
-                    <img src="Images/movies/65.jpg" alt="Movie 65">
+            <div class="carousel-box">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Images/movies/the-little-mermaid.jpeg" alt="The Little Mermaid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/movies/the-black-demon.jpg" alt="The Black Demon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/movies/the-covenant.jpg" alt="The Covenant">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/movies/the-tank.jpeg" alt="The Tank">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/movies/65.jpg" alt="Movie 65">
+                    </div>
                 </div>
-                <button class="prev" onclick="moveSlide(-1)">❮</button>
-                <button class="next" onclick="moveSlide(1)">❯</button>
             </div>
         </div>
     </section>
@@ -69,17 +77,26 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footerLeft">
-            <p>Watch Trailer</p>
+            <a class="play" href="#"><i class="fa-solid fa-circle-play"></i>Watch</a>
         </div>
 
         <div class="footerRight">
-
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://kit.fontawesome.com/1435e10dcb.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
 </body>
 
 </html>
