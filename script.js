@@ -20,7 +20,7 @@ $(document).ready(function () {
         $('body').css('background-image', 'url(' + bgImageUrl[index] + ')');
 
         // Find the corresponding image in the bodyLeft section
-        var $bodyLeftImages = $('.bodyLeft_Top img');
+        var $contentLeftImages = $('.contentLeft_Top img');
 
         // Find the corresponding image URL in the bodyLeft section
         var movieLogoUrl = [
@@ -32,10 +32,10 @@ $(document).ready(function () {
         ];
 
         // Set the src attribute of the image in the bodyLeft section
-        $bodyLeftImages.attr('src', movieLogoUrl[index]);
+        $contentLeftImages.attr('src', movieLogoUrl[index]);
 
         // Find the corresponding spans in the bodyLeft section
-        var $bodyMiddleH4 = $('.bodyLeft_Middle h4');
+        var $contentMiddleH4 = $('.contentLeft_Middle h4');
 
         // Array containing the movie details for each carousel item
         var movieDetails = [
@@ -43,14 +43,14 @@ $(document).ready(function () {
             '<span>2023</span><span><i>R</i></span><span>1h 40m</span><span>Drama & Horror</span>',
             '<span>2023</span><span><i>R</i></span><span>2h 3m</span><span>Action & Drama</span>',
             '<span>2023</span><span><i>R</i></span><span>1h 40m</span><span>Horror & Mystery</span>',
-            '<span>2023</span><span><i>PG-13</i></span><span>1h 33m</span><span>Action & Sci-Fi</span>'            
+            '<span>2023</span><span><i>PG-13</i></span><span>1h 33m</span><span>Action & Sci-Fi</span>'
         ];
 
         // Update the HTML content of the h4 element in the bodyLeft section
-        $bodyMiddleH4.html(movieDetails[index]);
+        $contentMiddleH4.html(movieDetails[index]);
 
         // Find the corresponding p tag in the bodyLeft_Bottom section
-        var $bodyBottomP = $('.bodyLeft_Bottom p');
+        var $contentBottomP = $('.contentLeft_Bottom p');
 
         // Array containing the movie descriptions for each carousel item
         var movieDescriptions = [
@@ -60,8 +60,43 @@ $(document).ready(function () {
             "After mysteriously inheriting an abandoned coastal property, Ben and his family accidentally unleash an ancient, long-dormant creature that terrorized the entire region-including his own ancestors-for generations.",
             "After a catastrophic crash, pilot Mills quickly discovers he's actually stranded on an unknown planet. Now, with only one chance at rescue, Mills must make his way across an unknown terrain riddled with dangerous prehistoric creatures in an epic fight to survive. From the writers of A Quiet Place comes 65, a sci-fi thriller produced by Sam Raimi, Deborah Liebling, Zainab Azizi, Scott Beck and Bryan Woods"
         ];
-
-        // Update the text content of the p tag in the bodyLeft_Bottom section
-        $bodyBottomP.text(movieDescriptions[index]);
     });
+});
+
+// When the "Watch Trailer" link is clicked
+$('.footerLeft').on('click', '.play', function (e) {
+    // Prevent the default action of the link
+    e.preventDefault();
+
+    // Get the index of the active carousel item
+    var index = $('.carousel-item.active').index();
+
+    // Show the trailerContainer
+    $('.trailerContainer').css('display', 'block');
+
+    // Show the trailer iframe based on the active carousel item
+    var iframeUrls = [
+        'https://www.youtube.com/embed/kpGo2_d3oYE?si=COivBT0uXadZnG3e',
+        'https://www.youtube.com/embed/z1xJAyVKAPY?si=t8-XCnFUpynnno7N',
+        'https://www.youtube.com/embed/02PPMPArNEQ?si=y3VxlwdP9HxhYiva',
+        'https://www.youtube.com/embed/23GmhsmrCIo?si=QAft6LEKQcRwCj00',
+        'https://www.youtube.com/embed/bHXejJq5vr0?si=i2xxGHmzOLYzuK7N'
+    ];
+    var iframeCode = '<iframe width="700" height="450" src="' + iframeUrls[index] + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    $('.trailer').html(iframeCode);
+
+    // Blur the body
+    $('.main').addClass('blur');
+});
+
+// When the close button is clicked
+$('.trailerContainer').on('click', '.close', function () {
+    // Hide the trailerContainer
+    $('.trailerContainer').css('display', 'none');
+
+    // Hide the iframe
+    $('.trailer').empty();
+
+    // Remove the blur effect from the body
+    $('.main').removeClass('blur');
 });
