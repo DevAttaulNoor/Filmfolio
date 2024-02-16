@@ -11,9 +11,9 @@ $(document).ready(function () {
         var bgImageUrl = [
             'Images/movies/bg-little-mermaid.jpg',
             'Images/movies/bg-the-black-demon.jpeg',
-            'Images/movies/bg-the-covenant.jpeg',
-            'Images/movies/bg-the-tank.jpeg',
-            'Images/movies/bg-65.jpeg'
+            'Images/movies/bg-the-covenant.jpg',
+            'Images/movies/bg-the-tank.jpg',
+            'Images/movies/bg-65.jpg'
         ];
 
         // Change the background image URL of the body
