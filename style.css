@@ -117,6 +117,7 @@ body {
     color: var(--whiteColor);
     background: transparent;
     padding: 0 9px 0 36px;
+    margin: 0;
     outline: none;
     border-bottom: 1px solid var(--secondaryColor);
 }
@@ -212,6 +213,10 @@ body {
     border-radius: 5px;
     color: var(--whiteColor);
     background: var(--primaryColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content .contentLeft_Bottom .button a:hover {
@@ -352,4 +357,101 @@ body {
     color: white;
     cursor: pointer;
     z-index: 10001;
+}
+
+
+/** Responsive Screens */
+@media screen and (max-width: 990px) {
+    /** Header Section */
+    .header {
+        height: 60px;
+        margin: 0 60px;
+    }
+
+    /* Header Left Section */
+    .header .headerLeft {
+        width: 180px;
+    }
+
+    /* Header Right Section */
+    .header .headerRight {
+        width: 180px;
+    }
+
+    /** Content Section */
+    .content {
+        gap: 80px;
+        margin: 0 60px;
+    }
+
+    /* Content Left Section */
+    .content .contentLeft_Top img {
+        height: 40px;
+        margin: 0 0 10px 0;
+    }
+
+    .content .contentLeft_Middle h4 {
+        font-size: 18px;
+    }
+
+    .content .contentLeft_Middle h4 span {
+        padding: 0 6px;
+    }
+
+    .content .contentLeft_Middle h4 span i {
+        padding: 0 6px;
+    }
+
+    .content .contentLeft_Bottom p {
+        font-size: 13px;
+        margin: 10px 0;
+    }
+
+    .content .contentLeft_Bottom .button {
+        width: 65%;
+        gap: 8px;
+    }
+
+    .content .contentLeft_Bottom .button a {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .content .contentLeft_Bottom .button a i {
+        font-size: 12px;
+        padding-right: 6px;
+    }
+
+    /* Content Right Section */
+    .contentRight .carousel-box {
+        width: 450px;
+    }
+
+    .contentRight .carousel-box .carousel {
+        height: 220px;
+        perspective: 1800px;
+    }
+
+    .contentRight .carousel-box .carousel .carousel-item {
+        width: 85px;
+        transform: translateX(125px) translateY(50px);
+    }
+
+    .contentRight .carousel-box .carousel .carousel-item .active {
+        width: 85px;
+        transform: translateX(180px) translateY(50px);
+    }
+
+    .contentRight .carousel-box .carousel .carousel-item img {
+        width: 85px;
+    }
+
+    /** Footer Section */
+    .footer {
+        margin: 0 60px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+
 }
