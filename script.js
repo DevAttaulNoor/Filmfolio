@@ -90,6 +90,7 @@ $(document).ready(function () {
     $(".fa-bars").click(function () {
         $(".hamburgerHeaderRightContent").toggleClass("visable");
     });
+    
     $(".fa-indent").click(function () {
         $(".hamburgerHeaderRightContent").removeClass("visable");
     });

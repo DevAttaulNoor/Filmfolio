@@ -547,6 +547,7 @@ body {
 
     .hamburgerHeaderRight .hamburgerHeaderRightContent.visable {
         right: 0;
+        width: 230px;
     }
 
     /** Content Section */
