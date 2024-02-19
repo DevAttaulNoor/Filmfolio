@@ -591,6 +591,8 @@ body {
 
     .content .contentLeft_Bottom .button {
         width: 100%;
+        display:flex;
+        justify-content: center;
     }
 
     /* Content Right Section */

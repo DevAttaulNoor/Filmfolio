@@ -1,7 +1,9 @@
 $(document).ready(function () {
     $('.carousel').carousel();
-    $('.carousel').on('click', '.carousel-item', function () {
-        var index = $(this).index();
+
+    // Function to update content based on active slide index
+    function updateContent() {
+        var index = $('.carousel-item.active').index();
 
         // Change the background image URL of the body
         var bgImageUrl = [
@@ -45,8 +47,12 @@ $(document).ready(function () {
             "After a catastrophic crash, pilot Mills quickly discovers he's actually stranded on an unknown planet. Now, with only one chance at rescue, Mills must make his way across an unknown terrain riddled with dangerous prehistoric creatures in an epic fight to survive. From the writers of A Quiet Place comes 65, a sci-fi thriller produced by Sam Raimi, Deborah Liebling, Zainab Azizi, Scott Beck and Bryan Woods"
         ];
         $contentBottomP.text(movieDescriptions[index]);
-    });
+    }
+
+    // Timer to periodically update content based on active slide index
+    var slideTimer = setInterval(updateContent, 500); // Adjust the interval as needed
 });
+
 
 // Show the trailer iframe based on the active carousel item
 $('.footerLeft').on('click', '.play', function (e) {
@@ -77,7 +83,6 @@ $('.footerLeft').on('click', '.play', function (e) {
     $('.main').addClass('blur');
 });
 
-
 // When the close button is clicked
 $('.trailerContainer').on('click', '.close', function () {
     $('.trailerContainer').css('display', 'none');
@@ -90,7 +95,7 @@ $(document).ready(function () {
     $(".fa-bars").click(function () {
         $(".hamburgerHeaderRightContent").toggleClass("visable");
     });
-    
+
     $(".fa-indent").click(function () {
         $(".hamburgerHeaderRightContent").removeClass("visable");
     });
