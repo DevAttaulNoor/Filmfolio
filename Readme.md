@@ -1,6 +1,8 @@
 # Introduction
 This project showcases a sleek and interactive landing page for movie enthusiasts. With a focus on user experience, we've crafted a dynamic layout using HTML, CSS, and JavaScript to display a banner featuring some of the movies along with some information.
 
+Link to visit the website: https://devattaulnoor.github.io/Movies_LandingPage/
+
 # Features
 - **Responsive Design**: The landing page is designed to be responsive, ensuring a seamless viewing experience across various devices and screen sizes.
 - **Movie Banners**: The page displays 5-6 movie banners, each featuring a poster image and basic details like the movie title, release year, and genre.
