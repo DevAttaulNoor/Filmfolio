@@ -1,12 +1,14 @@
 /** Global Scope */
-
 :root {
     --primaryColor: #ff3700;
     --secondaryColor: rgba(255, 255, 255, 0.5);
     --whiteColor: #fff;
 }
 
-*,
+*{
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -14,12 +16,11 @@ h4,
 h5,
 p,
 input {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0 !important;
 }
 
-html::before {
+/* html::before {
     position: absolute;
     content: '';
     top: 0;
@@ -30,9 +31,17 @@ html::before {
     height: 100%;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.5);
+} */
+
+html {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background-image: url('Images/movies/bg-little-mermaid.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -43,11 +52,11 @@ body {
 /** Main Section */
 .main {
     position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: -webkit-fill-available;
-    height: 100vh;
 }
 
 .main.blur {
@@ -57,92 +66,46 @@ body {
 
 /** Header Section */
 .header {
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: -webkit-fill-available;
-    height: 80px;
-    margin: 0 80px;
+    padding: 0 80px;
     color: var(--whiteColor);
     background-color: transparent;
 }
 
-/* Header Left Section */
+/* HeaderLeft Section */
 .header .headerLeft {
-    width: 180px;
     display: flex;
-}
-
-.header .headerLeft a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .header .headerLeft a h2 {
     font-size: 32px;
     font-weight: 800;
+    color: var(--whiteColor);
 }
 
-/* Header Middle Section */
-.header .headerMiddle {
-    display: flex;
+/* HeaderRight Section */
+.header .headerRight {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 15px;
 }
 
-.header .headerMiddle p {
+.header .headerRight p {
     font-size: 15px;
     font-weight: 600;
-    padding: 0 12px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.header .headerMiddle p:first-child {
-    padding-left: 0px;
-}
-
-.header .headerMiddle p:last-child {
-    padding-right: 0px;
-}
-
-.header .headerMiddle p:hover {
-    cursor: pointer;
+.header .headerRight p:hover {
     color: var(--primaryColor);
 }
 
-/* Header Right Section */
-.header .headerRight {
-    position: relative;
-    width: 180px;
-    height: 30px;
-}
-
-.header .headerRight input {
-    width: -webkit-fill-available;
-    height: 100%;
-    font-size: 14px;
-    color: var(--whiteColor);
-    background: transparent;
-    padding: 0 9px 0 36px;
-    margin: 0;
-    outline: none;
-    border-bottom: 1px solid var(--secondaryColor);
-}
-
-.header .headerRight input::placeholder {
-    color: var(--whiteColor);
-}
-
-.header .headerRight i {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 13px;
-    color: var(--whiteColor);
-    padding: 1px 8px 1px 0;
-    border-right: 1px solid var(--whiteColor);
-    z-index: 1;
-}
-
+/** HamburgerHeader Section */
 .hamburgerHeader {
     display: none;
 }
@@ -367,7 +330,7 @@ body {
     z-index: 10001;
 }
 
-/** Responsive Screens */
+/** Responsive Screen Section */
 @media screen and (max-width: 990px) {
 
     /** Header Section */
@@ -591,7 +554,7 @@ body {
 
     .content .contentLeft_Bottom .button {
         width: 100%;
-        display:flex;
+        display: flex;
         justify-content: center;
     }
 
