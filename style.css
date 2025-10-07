@@ -25,7 +25,6 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url("Images/movies/bg-little-mermaid.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,11 +41,7 @@ main.content {
   justify-content: space-between;
   padding: 0 60px;
   gap: 60px;
-}
-
-main.content .blur {
-  filter: blur(3px);
-  background: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
 }
 
 /* ContentLeft Section */
@@ -55,15 +50,16 @@ main.content .blur {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-width: 300px;
 }
 
-.contentLeft img {
-  width: fit-content;
+.contentLeft img#movieTitleImage {
+  width: min-content;
   height: 100px;
   transition: 0.3s ease-in;
 }
 
-.contentLeft h4 {
+.contentLeft h4#movieMeta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -73,13 +69,13 @@ main.content .blur {
   color: var(--secondaryColor);
 }
 
-.contentLeft h4 span {
+.contentLeft h4#movieMeta span {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.contentLeft h4 span:not(:last-child)::after {
+.contentLeft h4#movieMeta span:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -88,7 +84,7 @@ main.content .blur {
   margin-left: 10px;
 }
 
-.contentLeft h4 span i {
+.contentLeft h4#movieMeta span i {
   font-size: 22px;
   padding: 0 8px;
   border-radius: 5px;
@@ -96,17 +92,17 @@ main.content .blur {
   background: var(--primaryColor);
 }
 
-.contentLeft p {
+.contentLeft p#movieDescription {
   font-weight: 400;
   text-align: justify;
   line-height: 1.3em;
-  opacity: 75%;
+  opacity: 0.75;
   color: var(--whiteColor);
 }
 
-.contentLeft button {
+.contentLeft button#watchTrailerBtn {
   width: fit-content;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
   text-decoration: none;
   text-transform: uppercase;
@@ -151,9 +147,6 @@ main.content .blur {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.contentRight .swiper-slide img {
   filter: brightness(0.8);
 }
 
@@ -163,33 +156,101 @@ main.content .blur {
 
 /** Trailer Container Section */
 .trailerContainer {
-  position: absolute;
+  position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   width: 100%;
   height: 100vh;
   display: none;
-  z-index: 9;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
-.trailerContainer .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.trailerContainer.show {
+  display: flex;
+}
+
+.trailerContainer #close {
+  font-size: 2rem;
+  color: white;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 11;
-  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .trailerContainer iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+  max-width: 90%;
+  max-height: 90%;
+  border: none;
+}
+
+/** Responsive Design */
+@media (max-width: 1024px) {
+  main.content {
+    padding: 0 30px;
+    gap: 40px;
+  }
+  .contentLeft {
+    flex: 0.4;
+  }
+  .contentLeft img#movieTitleImage {
+    height: 80px;
+  }
+  .contentLeft p#movieDescription {
+    font-size: 15px;
+  }
+  .contentRight {
+    flex: 0.6;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  main.content {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .contentLeft {
+    align-items: center;
+  }
+  .contentLeft h4#movieMeta {
+    font-size: 18px;
+    justify-content: center;
+  }
+  .contentLeft p#movieDescription {
+    font-size: 14px;
+  }
+  .contentRight {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  main.content {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .contentLeft img#movieTitleImage {
+    height: 60px;
+  }
+  .contentLeft h4#movieMeta {
+    font-size: 16px;
+  }
+  .contentLeft p#movieDescription {
+    font-size: 13px;
+  }
+  .contentLeft button#watchTrailerBtn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .contentRight {
+    height: 250px;
+  }
 }

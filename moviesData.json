@@ -6,7 +6,7 @@
         "rating": "PG",
         "duration": "2h 15m",
         "genre": "Adventure & Romance",
-        "description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the evil sea witch, Ursula, to experience life on land.",
+        "description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with an insatiable thirst for adventure. Longing to discover the world beyond the sea, she bravely ventures to the surface where she encounters Prince Eric. Enchanted by love, she strikes a perilous deal with the malevolent sea witch Ursula to live on land. A breathtaking tale of courage, love, and sacrifice that blends magic with timeless romance.",
         "trailer": "https://www.youtube.com/embed/kpGo2_d3oYE?si=COivBT0uXadZnG3e"
     },
     {
@@ -16,8 +16,8 @@
         "rating": "R",
         "duration": "1h 40m",
         "genre": "Thriller & Horror",
-        "description": "A family trip to Mexico turns into a nightmare when they encounter a massive shark near an abandoned oil rig.",
-        "trailer": "https://www.youtube.com/embed/SAMPLE_TRAILER_1"
+        "description": "A family's idyllic vacation to the shores of Mexico turns into a fight for survival when a colossal and mysterious shark begins to terrorize the coastline. Against the backdrop of stunning beaches, they are thrust into a nightmare where danger lurks beneath the waves. Filled with suspense, chilling moments, and breathtaking underwater cinematography, this film is a thrilling dive into fear and courage.",
+        "trailer": "https://www.youtube.com/embed/z1xJAyVKAPY?si=t8-XCnFUpynnno7N"
     },
     {
         "titleImg": "Images/the-covenant-title.png",
@@ -26,27 +26,27 @@
         "rating": "R",
         "duration": "2h 3m",
         "genre": "Action & Drama",
-        "description": "A soldier returns to Afghanistan to rescue the interpreter who saved his life during the war.",
-        "trailer": "https://www.youtube.com/embed/SAMPLE_TRAILER_2"
+        "description": "Following a harrowing mission in Afghanistan, a battle-hardened soldier returns home with a mission of deep gratitude and courage — to rescue the interpreter who risked his life to save him. Against a backdrop of war-torn landscapes and moral dilemmas, this story weaves action, sacrifice, and humanity into a powerful cinematic journey that explores friendship, honor, and redemption.",
+        "trailer": "https://www.youtube.com/embed/02PPMPArNEQ?si=y3VxlwdP9HxhYiva"
     },
     {
         "titleImg": "Images/the-tank-title.png",
         "bgImg": "Images/movies/bg-the-tank.jpg",
         "year": "2023",
-        "rating": "PG-13",
+        "rating": "PG",
         "duration": "1h 50m",
         "genre": "Horror & Mystery",
-        "description": "A family uncovers a long-buried secret in a coastal property, unleashing an ancient creature.",
-        "trailer": "https://www.youtube.com/embed/SAMPLE_TRAILER_3"
+        "description": "A serene coastal retreat turns into a nightmare as a family discovers a hidden and terrifying secret buried deep beneath their property. What begins as an escape to tranquility soon becomes a terrifying ordeal when the ancient evil is unleashed. With suspense, supernatural intrigue, and chilling visuals, this is a gripping tale of mystery, fear, and survival.",
+        "trailer": "https://www.youtube.com/embed/23GmhsmrCIo?si=QAft6LEKQcRwCj00"
     },
     {
         "titleImg": "Images/the-65-title.png",
         "bgImg": "Images/movies/bg-65.jpg",
         "year": "2023",
-        "rating": "PG-13",
+        "rating": "PG",
         "duration": "1h 33m",
         "genre": "Sci-Fi & Adventure",
-        "description": "After a crash landing on an unknown planet, a pilot discovers he's not alone — dinosaurs roam the land.",
-        "trailer": "https://www.youtube.com/embed/SAMPLE_TRAILER_4"
+        "description": "After a catastrophic crash landing on a mysterious planet, an astronaut discovers he is not alone. The planet teems with gigantic dinosaurs and primal threats, forcing him to fight for survival in an alien world. Blending heart-pounding adventure with jaw-dropping visual effects, this film is a thrilling exploration of survival, human spirit, and the awe-inspiring mysteries of the unknown.",
+        "trailer": "https://www.youtube.com/embed/bHXejJq5vr0?si=i2xxGHmzOLYzuK7N"
     }
 ]
