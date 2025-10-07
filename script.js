@@ -7,41 +7,41 @@ fetch("./moviesData.json")
         const desc = document.getElementById("movieDescription");
         const trailerFrame = document.getElementById("trailerFrame");
         const body = document.body;
-
-        const trailerContainer = document.querySelector(".trailerContainer");
         const watchTrailerBtn = document.getElementById("watchTrailerBtn");
-        const closeTrailerBtn = document.querySelector(".trailerContainer #close");
+        const trailerContainer = document.querySelector(".trailerContainer");
+        const closeBtn = document.querySelector(".trailerContainer #close");
 
         // Insert slides dynamically
         swiperWrapper.innerHTML = movies
             .map(movie => `
-      <div class="swiper-slide">
-        <img src="${movie.bgImg}" alt="${movie.titleImg}">
-      </div>
-    `)
+        <div class="swiper-slide">
+          <img src="${movie.bgImg}" alt="${movie.titleImg}">
+        </div>
+      `)
             .join("");
 
-        // Initialize Swiper
+        // Initialize Swiper with responsive breakpoints
         const swiper = new Swiper(".swiper-container", {
             centeredSlides: true,
             loop: true,
             speed: 500,
-            slidesPerView: 3.5,
+            slidesPerView: 3,
             spaceBetween: 0,
             breakpoints: {
                 0: { slidesPerView: 1.5 },
-                480: { slidesPerView: 1.8 },
-                768: { slidesPerView: 2.5 },
-                1024: { slidesPerView: 3.5 }
+                480: { slidesPerView: 2.5 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 2.5 },
+                1280: { slidesPerView: 3 }
             }
         });
 
-        // Function to update content
+        // Function to update movie details + background + trailer
         const updateContent = (index) => {
             const movie = movies[index % movies.length];
 
             titleImg.src = movie.titleImg;
-            titleImg.alt = movie.title;
+            titleImg.alt = movie.titleImg;
 
             meta.innerHTML = `
         <span>${movie.year}</span>
@@ -52,8 +52,10 @@ fetch("./moviesData.json")
 
             desc.textContent = movie.description;
 
-            trailerFrame.src = movie.trailer;
+            // Store trailer link for button click
+            watchTrailerBtn.dataset.trailer = movie.trailer;
 
+            // Smoothly change body background
             body.style.transition = "background 1s ease-in-out";
             body.style.background = `
         linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
@@ -61,7 +63,7 @@ fetch("./moviesData.json")
       `;
         };
 
-        // Initial content load
+        // Load initial content
         updateContent(swiper.realIndex);
 
         // Update content on slide change
@@ -69,14 +71,16 @@ fetch("./moviesData.json")
             updateContent(swiper.realIndex);
         });
 
-        // Trailer modal show/hide
+        // Open trailer modal
         watchTrailerBtn.addEventListener("click", () => {
             trailerContainer.classList.add("show");
+            trailerFrame.src = watchTrailerBtn.dataset.trailer;
         });
 
-        closeTrailerBtn.addEventListener("click", () => {
+        // Close trailer modal
+        closeBtn.addEventListener("click", () => {
             trailerContainer.classList.remove("show");
-            trailerFrame.src = ""; // Stop video playback
+            trailerFrame.src = ""; // Stop trailer
         });
     })
     .catch(err => console.error("Error loading movies data:", err));
