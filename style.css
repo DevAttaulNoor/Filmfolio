@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 /** Global Scope */
 :root {
-    --primaryColor: #ff3700;
-    --secondaryColor: rgba(255, 255, 255, 0.5);
-    --whiteColor: #fff;
+  --whiteColor: #fff;
+  --primaryColor: #ff3700;
+  --secondaryColor: rgba(255, 255, 255, 0.5);
 }
 
 *,
@@ -13,571 +15,181 @@ h4,
 h5,
 p,
 input {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background-image: url('Images/movies/bg-little-mermaid.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.3s ease-in;
-}
-
-/** Main Section */
-.main {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.main.blur {
-    filter: blur(3px);
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/** Header Section */
-.header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
-    color: var(--whiteColor);
-    background-color: transparent;
-}
-
-/* HeaderLeft Section */
-.header .headerLeft {
-    display: flex;
-}
-
-.header .headerLeft a h2 {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--whiteColor);
-}
-
-/* HeaderRight Section */
-.header .headerRight {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    gap: 15px;
-}
-
-.header .headerRight p {
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.header .headerRight p:hover {
-    color: var(--primaryColor);
-}
-
-/** HamburgerHeader Section */
-.hamburgerHeader {
-    display: none;
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("Images/movies/bg-little-mermaid.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s ease-in;
 }
 
 /** Content Section */
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
-    gap: 80px;
+main.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 60px;
+}
+
+main.content .blur {
+  filter: blur(3px);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* ContentLeft Section */
-.content .contentLeft {
-    display: flex;
-    flex-direction: column;
+.contentLeft {
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.content .contentLeft_Top img {
-    width: auto;
-    height: 80px;
-    margin: 0 0 10px 0;
-    transition: 0.3s ease-in;
+.contentLeft img {
+  width: fit-content;
+  height: 100px;
+  transition: 0.3s ease-in;
 }
 
-.content .contentLeft_Middle h4 {
-    font-size: 26px;
-    font-weight: 400;
-    color: var(--secondaryColor);
+.contentLeft h4 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--secondaryColor);
 }
 
-.content .contentLeft_Middle h4 span {
-    padding: 0 10px;
-    border-right: 1px solid var(--secondaryColor);
+.contentLeft h4 span {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.content .contentLeft_Middle h4 span:first-child {
-    padding-left: 0;
+.contentLeft h4 span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 26px;
+  background-color: var(--secondaryColor);
+  margin-left: 10px;
 }
 
-.content .contentLeft_Middle h4 span:last-child {
-    padding-right: 0;
-    border-right: none;
+.contentLeft h4 span i {
+  font-size: 22px;
+  padding: 0 8px;
+  border-radius: 5px;
+  color: var(--whiteColor);
+  background: var(--primaryColor);
 }
 
-.content .contentLeft_Middle h4 span i {
-    padding: 0 8px;
-    border-radius: 5px;
-    color: var(--whiteColor);
-    background: var(--primaryColor);
+.contentLeft p {
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.3em;
+  opacity: 75%;
+  color: var(--whiteColor);
 }
 
-.content .contentLeft_Bottom p {
-    font-size: 14px;
-    font-weight: 300;
-    text-align: justify;
-    line-height: 1.3em;
-    margin: 10px 0;
-    color: var(--whiteColor);
-}
-
-.content .contentLeft_Bottom .button {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.content .contentLeft_Bottom .button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-    transition: 0.3s;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 6px 15px;
-    border-radius: 5px;
-    color: var(--whiteColor);
-    background: var(--primaryColor);
-}
-
-.content .contentLeft_Bottom .button a:hover {
-    cursor: pointer;
-}
-
-.content .contentLeft_Bottom .button a i {
-    font-size: 12px;
-    padding-right: 8px;
-}
-
-.content .contentLeft_Bottom .button a:nth-child(2) {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.content .contentLeft_Bottom .button a:hover:nth-child(2) {
-    background: var(--primaryColor);
+.contentLeft button {
+  width: fit-content;
+  font-size: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--whiteColor);
+  background: var(--primaryColor);
 }
 
 /* ContentRight Section */
 .contentRight {
-    display: flex;
-    align-items: center;
+  flex: 0.65;
+  width: 100%;
+  height: 400px;
+  padding: 40px 0;
+  overflow: hidden;
 }
 
-.contentRight .carousel-box {
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    backdrop-filter: blur(15px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.2);
+.contentRight .swiper-slide {
+  opacity: 0.5;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.contentRight .carousel-box .carousel {
-    height: 335px;
-    perspective: 1800px;
+.contentRight .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 2;
 }
 
-.contentRight .carousel-box .carousel .carousel-item,
-.contentRight .carousel-box .carousel .carousel-item .active {
-    width: 150px;
-    height: fit-content;
+.contentRight .swiper-slide-next,
+.contentRight .swiper-slide-prev {
+  opacity: 0.8;
+  transform: scale(1.1);
+  z-index: 1;
 }
 
-.contentRight .carousel-box .carousel .carousel-item:hover,
-.contentRight .carousel-box .carousel .carousel-item .active:hover {
-    cursor: pointer;
+.contentRight .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.contentRight .carousel-box .carousel .carousel-item img {
-    width: 150px;
-    height: fit-content;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
+.contentRight .swiper-slide img {
+  filter: brightness(0.8);
 }
 
-/** Footer Section */
-.footer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
-}
-
-/* FooterLeft Section */
-.footerLeft .play {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.3s;
-    cursor: pointer;
-    color: var(--whiteColor);
-}
-
-.footerLeft .play:hover {
-    color: var(--primaryColor);
-}
-
-.footerLeft .play i {
-    font-size: 22px;
-    margin-right: 8px;
-}
-
-/* FooterRight Section */
-.footerRight {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.footerRight a {
-    font-size: 22px;
-    color: var(--whiteColor);
-    transition: 0.3s;
-}
-
-.footerRight a:hover {
-    color: var(--primaryColor);
-    cursor: pointer;
+.contentRight .swiper-slide-active img {
+  filter: brightness(1);
 }
 
 /** Trailer Container Section */
 .trailerContainer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    z-index: 9;
-    overflow: hidden;
-}
-
-.trailerContainer .trailer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 9;
+  overflow: hidden;
 }
 
 .trailerContainer .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 11;
-    color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+  color: white;
 }
 
-/** Responsive Screen Section */
-@media screen and (max-width: 1200px) {
-
-    /** Content Section */
-    .content {
-        gap: 45px;
-    }
-
-    /* Content Right Section */
-    .contentRight .carousel-box {
-        width: 550px;
-    }
-
-    .contentRight .carousel-box .carousel {
-        height: 305px;
-        perspective: 1000px;
-    }
-}
-
-@media screen and (max-width: 950px) {
-
-    /** Header Section */
-    .header {
-        padding: 0 40px;
-    }
-
-    /** Content Section */
-    .content {
-        padding: 0 40px;
-        gap: 40px;
-    }
-
-    /* ContentLeft Section */
-    .content .contentLeft {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content .contentLeft_Top img {
-        height: 60px;
-        margin: 0px;
-    }
-
-    .content .contentLeft_Middle h4 {
-        font-size: 20px;
-        margin: 5px 0px;
-    }
-
-    .content .contentLeft_Middle h4 span {
-        padding: 0 8px;
-    }
-
-    .content .contentLeft_Middle h4 span i {
-        padding: 0 6px;
-    }
-
-    .content .contentLeft_Bottom p {
-        font-size: 13px;
-        line-height: 1.2em;
-        margin: 6px 0;
-    }
-
-    .content .contentLeft_Bottom .button {
-        gap: 8px;
-    }
-
-    /* Content Right Section */
-    .contentRight .carousel-box {
-        width: 380px;
-    }
-
-    .contentRight .carousel-box .carousel {
-        height: 240px;
-        perspective: 500px;
-    }
-
-    .contentRight .carousel-box .carousel .carousel-item,
-    .contentRight .carousel-box .carousel .carousel-item .active {
-        width: 125px;
-    }
-
-    .contentRight .carousel-box .carousel .carousel-item img {
-        width: 125px;
-    }
-
-    /** Footer Section */
-    .footer {
-        padding: 0 40px;
-    }
-}
-
-@media screen and (max-width: 680px) {
-
-    /** Header Section */
-    .header {
-        display: none;
-    }
-
-    /** HamburgerHeader Section */
-    .hamburgerHeader {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        color: var(--whiteColor);
-        background-color: transparent;
-    }
-
-    /* HamburgerHeaderLeft Section */
-    .hamburgerHeaderLeft {
-        display: flex;
-    }
-
-    .hamburgerHeaderLeft a h2 {
-        font-size: 32px;
-        font-weight: 800;
-        margin: 0px;
-        color: var(--whiteColor);
-    }
-
-    /* HamburgerHeaderRight Section */
-    .hamburgerHeaderRight {
-        display: flex;
-        align-items: center;
-    }
-
-    .hamburgerHeaderRight i {
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .hamburgerHeaderRightContent {
-        position: absolute;
-        top: 0;
-        right: -260px;
-    }
-
-    .hamburgerHeaderRightContent.visable {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 150px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 13px 10px;
-        z-index: 9;
-        transition: right 0.3s ease-in-out;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .hamburgerHeaderRightContent.visable p {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 5px 0;
-    }
-
-    /** Content Section */
-    .content {
-        flex-direction: column;
-        padding: 0 20px;
-        gap: 30px;
-    }
-
-    /* ContentLeft Section */
-    .content .contentLeft {
-        align-items: center;
-    }
-
-    .content .contentLeft_Top img {
-        height: 80px;
-        margin: 0 0 5px 0;
-    }
-
-    .content .contentLeft_Middle h4 {
-        font-size: 16px;
-        margin: 0px;
-    }
-
-    .content .contentLeft_Bottom p {
-        font-size: 14px;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .content .contentLeft_Bottom .button {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    /* ContentRight Section */
-    .contentRight .carousel-box {
-        width: 350px;
-    }
-
-    .contentRight .carousel-box .carousel {
-        height: 200px;
-        perspective: 1000px;
-    }
-
-    .contentRight .carousel-box .carousel .carousel-item,
-    .contentRight .carousel-box .carousel .carousel-item img,
-    .contentRight .carousel-box .carousel .carousel-item .active {
-        width: 85px;
-    }
-
-    /** Footer Section */
-    .footer {
-        height: 60px;
-        padding: 0 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    /* ContentRight Section */
-    .contentRight .carousel-box {
-        width: 260px;
-    }
-
-    .contentRight .carousel-box .carousel {
-        height: 200px;
-        perspective: 500px;
-    }
-
-    /* HamburgerHeaderRight Section */
-    .hamburgerHeaderRight {
-        display: flex;
-        align-items: center;
-    }
-
-    .hamburgerHeaderRight i {
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .hamburgerHeaderRightContent {
-        position: absolute;
-        top: 0;
-        right: -260px;
-    }
-
-    .hamburgerHeaderRightContent.visable {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 13px 8px;
-        z-index: 9;
-        transition: right 0.3s ease-in-out;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .hamburgerHeaderRightContent.visable p {
-        font-size: 14px;
-        font-weight: 500;
-        padding: 5px 0;
-    }
+.trailerContainer iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }

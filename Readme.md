@@ -1,20 +1,40 @@
-# Introduction
-This project showcases a sleek and interactive landing page for movie enthusiasts. With a focus on user experience, we've crafted a dynamic layout using HTML, CSS, and JavaScript to display a banner featuring some of the movies along with some information.
+# Filmfolio — Movie Landing Page
 
-Link to visit the website: https://devattaulnoor.github.io/Movies_LandingPage/
+A sleek, interactive movie showcase landing page built using HTML, CSS, JavaScript, and Swiper.js.
+Displays a responsive carousel of movie banners, dynamically updates movie details, and changes background imagery for an immersive experience.
 
-# Features
-- **Responsive Design**: The landing page is designed to be responsive, ensuring a seamless viewing experience across various devices and screen sizes.
-- **Movie Banners**: The page displays 5-6 movie banners, each featuring a poster image and basic details like the movie title, release year, and genre.
-- **Interactive Elements**: Users can interact with the movie banners by hovering over them to reveal additional details or clicking to navigate to a separate page for more information.
+**Live Demo:** [Filmfolio](https://devattaulnoor.github.io/Filmfolio/)
 
-# Technologies Used
-- HTML: Markup language for structuring the content of the web page.
-- CSS: Styling language used to enhance the visual presentation and layout.
-- JavaScript: Programming language utilized for implementing interactive features and dynamic behavior.
+## 🛠 Getting Started
 
-# License
-This project is licensed under the DevAttaulNoor.
+To run this project locally:
 
-# Contact
+1. Clone this repository or download the source code.
+2. Open the project directory in your preferred code editor.
+3. Ensure you have a modern web browser installed.
+4. Open `index.html` in your browser.
+
+## ✨ Features
+
+This project includes:
+
+- Responsive carousel of movie banners powered by Swiper.js.
+- Dynamic movie details panel (year, rating, duration, genre, description).
+- Smooth background transitions matching the active movie.
+- Clickable "Watch Trailer" button that opens the trailer in a modal.
+- Fully responsive design for desktop and mobile.
+
+## 🧰 Technologies Used
+
+- **HTML** – Structure and content of the landing page.
+- **CSS** – Styling and responsive design.
+- **JavaScript** – Dynamic content, Swiper integration, background updates.
+- **Swiper.js** - Interactive and responsive carousel functionality.
+
+## 📄 License
+
+This project is licensed under DevAttaulNoor License.
+
+## 📬 Contact
+
 If you have any questions or suggestions, feel free to contact the project maintainer at attaulnoor2001@gmail.com
